@@ -149,6 +149,47 @@
         text-align: center;
         line-height: 1.8;
       }
+      .review-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.review-item:hover {
+  transform: scale(1.02);
+}
+
+.review-item.kaspi {
+  background: linear-gradient(120deg, #ffca28, #ff8f00);
+  color: #333;
+}
+
+.review-item.wb {
+  background: linear-gradient(120deg, #673ab7, #311b92);
+  color: #fff;
+}
+
+.review-item.ozon {
+  background: linear-gradient(120deg, #1e88e5, #0d47a1);
+  color: #fff;
+}
+
+.review-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.reviews ul {
+  list-style: none;
+}
+
+.reviews ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
       .gallery {
         margin-top: 30px;
       }
@@ -335,11 +376,25 @@
       <div class="reviews">
         <h2>Отзывы</h2>
         <ul>
-          <li>"Отличный товар! Очень доволен!" — Пользователь с Kaspi</li>
-          <li>"Качественный продукт, быстрая доставка." — Отзыв с WB</li>
-          <li>"Приложение удобное, дети в восторге!" — Клиент с Ozon</li>
+          <li class="review-item kaspi">
+            <strong>Иванов Иван Иванович ⭐⭐⭐⭐⭐ (Kaspi)</strong>
+            <p>Супер вупер дупер классно!</p>
+          </li>
+          <li class="review-item wb">
+            <strong>Сидоров Сидор Сидорович ⭐⭐⭐⭐ (WB)</strong>
+            <p>Товар оправдал ожидания, работает отлично.</p>
+          </li>
+          <li class="review-item ozon">
+            <strong>Петров Петр Петрович ⭐⭐⭐⭐⭐ (Ozon)</strong>
+            <p>Очень качественный продукт, рекомендую!</p>
+          </li>
+          <li class="review-item kaspi">
+            <strong>Александров Александр Александрович ⭐⭐⭐⭐ (Kaspi)</strong>
+            <p>Доставили быстро, работает как надо.</p>
+          </li>
         </ul>
       </div>
+      
 
       <div class="delivery">
         <h2>Доставка</h2>
@@ -375,7 +430,7 @@
           <img src="img/gallery5.jpg" alt="Фото 4" />
         </div>
       </div>
-    </div>
+  
 
     <footer>
       <p>© 2025 LifeTrend</p>
