@@ -74,7 +74,8 @@
       .product-info h2 {
         margin-bottom: 15px;
         font-size: 2rem;
-        color: #3d9970;
+        color: #001431;
+        text-align: center;
       }
 
       .product-info ul {
@@ -97,9 +98,13 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
+        margin-bottom: 20px;
       }
-
-      .cta .cta-links a {
+      .wtsp {
+        margin-top: 20px;
+      }
+      .cta .cta-links a,
+      .wtsp {
         background: #3d9970;
         padding: 10px 20px;
         color: #fff;
@@ -110,7 +115,8 @@
         transition: background 0.3s;
       }
 
-      .cta .cta-links a:hover {
+      .cta .cta-links a:hover,
+      .wtsp:hover {
         background: #2e8b57;
       }
 
@@ -119,7 +125,7 @@
         text-align: center;
       }
 
-      .video-container iframe {
+      iframe {
         width: 100%;
         max-width: 800px;
         height: 450px;
@@ -139,8 +145,11 @@
 
       .reviews h2,
       .delivery h2,
-      .differences h2 {
-        color: #3d9970;
+      .differences h2,
+      .obzor h2,
+      .tutorial h2 {
+        /* color: #3d9970; */
+        color: #001431;
         margin-bottom: 15px;
         text-align: center;
       }
@@ -160,6 +169,8 @@
         border-radius: 5px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s, background 0.3s;
+        width: 350px;
+        height: 300px;
       }
 
       .review-item:hover {
@@ -315,7 +326,10 @@
           font-size: 1.2rem;
           padding: 10px;
         }
-
+        .review-item {
+          width: 250px;
+          height: 200px;
+        }
         .product-info h2 {
           font-size: 1.5rem;
         }
@@ -416,6 +430,9 @@
                 >Купить на WB</a
               >
             </div>
+            <a href="https://wa.me/+77778706177" class="wtsp"
+              >свяжитесь с нами по WhatsApp</a
+            >
           </div>
         </div>
       </div>
@@ -431,6 +448,7 @@
           alt=""
         />
       </a>
+
       <div class="video-container">
         <h2>Видеообзор</h2>
         <iframe
@@ -440,31 +458,30 @@
           allowfullscreen
         ></iframe>
       </div>
-
       <div class="reviews">
         <h2>Отзывы</h2>
-        <ul>
-          <li class="review-item kaspi">
-            <strong>Иванов Иван Иванович ⭐⭐⭐⭐⭐ (Kaspi)</strong>
-            <p>Супер вупер дупер классно!</p>
-          </li>
-          <li class="review-item wb">
-            <strong>Сидоров Сидор Сидорович ⭐⭐⭐⭐ (WB)</strong>
-            <p>Товар оправдал ожидания, работает отлично.</p>
-          </li>
-          <li class="review-item ozon">
-            <strong>Петров Петр Петрович ⭐⭐⭐⭐⭐ (Ozon)</strong>
-            <p>Очень качественный продукт, рекомендую!</p>
-          </li>
-          <li class="review-item kaspi">
-            <strong
-              >Александров Александр Александрович ⭐⭐⭐⭐ (Kaspi)</strong
-            >
-            <p>Доставили быстро, работает как надо.</p>
-          </li>
-        </ul>
+        <div class="gallerry_photo">
+          <img class="review-item" src="img/otzv1.png" alt="Фото 1" />
+          <img class="review-item" src="img/otzv2.jpeg" alt="Фото 4" />
+          <img class="review-item" src="img/otzv3.jpeg" alt="Фото 4" />
+          <img class="review-item" src="img/otzv4.jpeg" alt="Фото 4" />
+          <img class="review-item" src="img/otzv5.jpeg" alt="Фото 4" />
+        </div>
       </div>
 
+      <div class="video-container">
+        <h2>Обзор</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/uG-SE8Nd8fk?si=LMAgm3iS-StZVfSm"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div class="delivery">
         <h2>Доставка</h2>
         <p>
@@ -487,7 +504,19 @@
         </ul>
       </div>
     </div>
-
+    <div class="video-container">
+      <h2>Инструкция по сборке</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/X7ZNgBY9B4A?si=4qF4hRoskF49ksRV"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
     <div class="gallery">
       <h2>Галерея</h2>
       <div class="gallerry_photo">
@@ -500,6 +529,9 @@
           alt="Фото 4"
         />
         <img src="img/gallery5.jpg" alt="Фото 4" />
+        <img src="img/3c9a8c4e-732f-4d4c-a842-3fd5d7af5815.jpeg" alt="Фото 4" />
+        <img src="img/9f437142-8eff-4b8d-b716-bf5d653a903c.jpeg" alt="Фото 4" />
+        <img src="img/e8169b77-150e-475f-8f04-e2a62830a5d2.jpeg" alt="Фото 4" />
       </div>
     </div>
 
