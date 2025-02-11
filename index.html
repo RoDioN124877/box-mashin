@@ -233,7 +233,35 @@
       .gallery .gallerry_photo img:hover {
         transform: scale(1.05);
       }
+      .galleryOzv {
+        margin-top: 30px;
+      }
 
+      .galleryOzv h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .galleryOzv .gallerry_photoOzv {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 350px);
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .galleryOzv .gallerry_photoOzv img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+      }
+
+      .galleryOzv .gallerry_photoOzv img:hover {
+        transform: scale(1.05);
+      }
       footer {
         background: #001f3f;
         color: #fff;
@@ -303,7 +331,11 @@
           width: 55px;
           height: 55px;
         }
-
+        .galleryOzv .gallerry_photoOzv {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, 350px);
+          gap: 15px;
+        }
         .product {
           flex-direction: column;
         }
@@ -333,7 +365,11 @@
         .product-info h2 {
           font-size: 1.5rem;
         }
-
+        .galleryOzv .gallerry_photoOzv {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, 250px);
+          gap: 15px;
+        }
         .cta .cta-links a {
           padding: 8px 15px;
           font-size: 0.9rem;
@@ -458,14 +494,14 @@
           allowfullscreen
         ></iframe>
       </div>
-      <div class="reviews">
+      <div class="galleryOzv">
         <h2>Отзывы</h2>
-        <div class="gallerry_photo">
-          <img class="review-item" src="img/otzv1.png" alt="Фото 1" />
-          <img class="review-item" src="img/otzv2.jpeg" alt="Фото 4" />
-          <img class="review-item" src="img/otzv3.jpeg" alt="Фото 4" />
-          <img class="review-item" src="img/otzv4.jpeg" alt="Фото 4" />
-          <img class="review-item" src="img/otzv5.jpeg" alt="Фото 4" />
+        <div class="gallerry_photoOzv">
+          <img class="review-item" src="img/otzv12.png" alt="Фото 1" />
+          <img class="review-item" src="img/otzv22.png" alt="Фото 4" />
+          <img class="review-item" src="img/otzv32.png" alt="Фото 4" />
+          <img class="review-item" src="img/otzv42.png" alt="Фото 4" />
+          <img class="review-item" src="img/otzv52.png" alt="Фото 4" />
         </div>
       </div>
 
@@ -521,13 +557,8 @@
       <h2>Галерея</h2>
       <div class="gallerry_photo">
         <img src="img/gallery1.jpg" alt="Фото 1" />
-        <img src="img/gallery2.avif" alt="Фото 2" />
-        <img src="img/gallery3.avif" alt="Фото 3" />
         <img src="img/gallery4.jpg" alt="Фото 4" />
-        <img
-          src="https://i.pinimg.com/originals/86/ba/d0/86bad0f54737717117796a73b22576db.gif"
-          alt="Фото 4"
-        />
+       
         <img src="img/gallery5.jpg" alt="Фото 4" />
         <img src="img/3c9a8c4e-732f-4d4c-a842-3fd5d7af5815.jpeg" alt="Фото 4" />
         <img src="img/9f437142-8eff-4b8d-b716-bf5d653a903c.jpeg" alt="Фото 4" />
