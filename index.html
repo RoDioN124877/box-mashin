@@ -4,433 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ONEPUNCH Box Machine</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        color: #fff;
-        background: linear-gradient(120deg, #001f3f, #3d9970);
-        overflow-x: hidden;
-      }
-
-      header {
-        background: #001f3f;
-        padding: 20px;
-        text-align: center;
-        font-size: 2rem;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        animation: fadeIn 2s ease-in;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .empty {
-        width: 100px;
-        height: 1px;
-      }
-      header img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 20px;
-      }
-
-      .product {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .product img {
-        max-width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        animation: zoomIn 1.5s ease-in-out;
-      }
-
-      .product-info {
-        flex: 1;
-        max-width: 600px;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 10px;
-        backdrop-filter: blur(10px);
-        animation: slideIn 1.5s ease-out;
-      }
-
-      .product-info h2 {
-        margin-bottom: 15px;
-        font-size: 2rem;
-        color: #001431;
-        text-align: center;
-      }
-
-      .product-info ul {
-        margin-bottom: 15px;
-        margin-left: 15px;
-      }
-
-      .product-info ul li {
-        margin: 5px 0;
-        line-height: 1.5;
-      }
-
-      .cta {
-        text-align: center;
-        margin-top: 20px;
-      }
-
-      .cta .cta-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-      .wtsp {
-        margin-top: 20px;
-      }
-      .cta .cta-links a,
-      .wtsp {
-        background: #3d9970;
-        padding: 10px 20px;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        box-shadow: 0 5px 10px rgba(61, 153, 112, 0.5);
-        transition: background 0.3s;
-      }
-
-      .cta .cta-links a:hover,
-      .wtsp:hover {
-        background: #2e8b57;
-      }
-
-      .video-container {
-        margin: 30px auto;
-        text-align: center;
-      }
-
-      iframe {
-        width: 100%;
-        max-width: 800px;
-        height: 450px;
-        border-radius: 10px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-      }
-
-      .reviews,
-      .delivery,
-      .differences {
-        margin-top: 30px;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        backdrop-filter: blur(10px);
-      }
-
-      .reviews h2,
-      .delivery h2,
-      .differences h2,
-      .obzor h2,
-      .tutorial h2 {
-        /* color: #3d9970; */
-        color: #001431;
-        margin-bottom: 15px;
-        text-align: center;
-      }
-      .reviews ul,
-      .differences ul {
-        margin-left: 2%;
-        line-height: 1.8;
-      }
-
-      .delivery p {
-        text-align: center;
-        line-height: 1.8;
-      }
-      .review-item {
-        margin-bottom: 15px;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s, background 0.3s;
-        width: 350px;
-        height: 300px;
-      }
-
-      .review-item:hover {
-        transform: scale(1.02);
-      }
-
-      .review-item.kaspi {
-        background: linear-gradient(120deg, #ffca28, #ff8f00);
-        color: #333;
-      }
-
-      .review-item.wb {
-        background: linear-gradient(120deg, #673ab7, #311b92);
-        color: #fff;
-      }
-
-      .review-item.ozon {
-        background: linear-gradient(120deg, #1e88e5, #0d47a1);
-        color: #fff;
-      }
-
-      .review-item strong {
-        display: block;
-        margin-bottom: 5px;
-      }
-
-      .reviews ul {
-        list-style: none;
-      }
-
-      .reviews ul li {
-        margin-bottom: 10px;
-        line-height: 1.5;
-      }
-
-      .gallery {
-        margin-top: 30px;
-      }
-
-      .gallery h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .gallery .gallerry_photo {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 15px;
-      }
-
-      .gallery .gallerry_photo img {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s;
-      }
-
-      .gallery .gallerry_photo img:hover {
-        transform: scale(1.05);
-      }
-      .galleryOzv {
-        margin-top: 30px;
-      }
-
-      .galleryOzv h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .galleryOzv .gallerry_photoOzv {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 350px);
-        gap: 15px;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .galleryOzv .gallerry_photoOzv img {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s;
-      }
-
-      .galleryOzv .gallerry_photoOzv img:hover {
-        transform: scale(1.05);
-      }
-      footer {
-        background: #001f3f;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        margin-top: 30px;
-      }
-
-      footer .social-links {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-      }
-
-      footer .social-links a {
-        color: #3d9970;
-        margin: 0;
-        text-decoration: none;
-        font-size: 1.2rem;
-      }
-
-      footer .social-links a:hover {
-        color: #2e8b57;
-      }
-
-      .branding {
-        text-align: center;
-        margin: 20px auto;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #3d9970;
-        animation: fadeIn 2s ease-in;
-      }
-      .whatsapp-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: linear-gradient(120deg, #25d366, #20b257);
-        color: white;
-        font-size: 1.5rem;
-        padding: 15px 20px;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-        text-align: center;
-        z-index: 1000;
-        text-decoration: none;
-      }
-
-      .whatsapp-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-      }
-      .whatsapp-btn img {
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-      }
-      @media (max-width: 768px) {
-        header {
-          font-size: 1.5rem;
-          flex-direction: column;
-        }
-        .whatsapp-btn {
-          padding: 15px 20px;
-        }
-        .whatsapp-btn img {
-          width: 55px;
-          height: 55px;
-        }
-        .galleryOzv .gallerry_photoOzv {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, 350px);
-          gap: 15px;
-        }
-        .product {
-          flex-direction: column;
-        }
-
-        .product-info {
-          max-width: 100%;
-        }
-
-        .video-container iframe {
-          height: 300px;
-        }
-
-        .gallery .gallerry_photo {
-          grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        }
-      }
-
-      @media (max-width: 480px) {
-        header {
-          font-size: 1.2rem;
-          padding: 10px;
-        }
-        .review-item {
-          width: 250px;
-          height: 200px;
-        }
-        .product-info h2 {
-          font-size: 1.5rem;
-        }
-        .galleryOzv .gallerry_photoOzv {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, 250px);
-          gap: 15px;
-        }
-        .cta .cta-links a {
-          padding: 8px 15px;
-          font-size: 0.9rem;
-        }
-        .whatsapp-btn {
-          padding: 10px 15px;
-        }
-        .whatsapp-btn img {
-          width: 50px;
-          height: 50px;
-        }
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes zoomIn {
-        from {
-          transform: scale(0.8);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      @keyframes slideIn {
-        from {
-          transform: translateY(50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background-color: #333;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        box-shadow: inset 0 0 6px rgb(0, 0, 0);
-        background-color: #000000;
-        border-radius: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
@@ -470,9 +44,9 @@
                 >Купить на WB</a
               >
             </div>
-            <a href="https://wa.me/+77778706177" class="wtsp"
+            <!-- <a href="https://wa.me/+77778706177" class="wtsp"
               >свяжитесь с нами по WhatsApp
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -489,7 +63,7 @@
         />
       </a>
 
-      <div class="video-container">
+      <section class="video-container">
         <h2>Видеообзор</h2>
         <iframe
           src="https://www.youtube.com/embed/TE4mz6eRPuU"
@@ -497,8 +71,8 @@
           frameborder="0"
           allowfullscreen
         ></iframe>
-      </div>
-      <div class="galleryOzv">
+      </section>
+      <section class="galleryOzv">
         <h2>Отзывы</h2>
         <div class="gallerry_photoOzv">
           <img class="review-item" src="img/otzv12.png" alt="Фото 1" />
@@ -507,9 +81,9 @@
           <img class="review-item" src="img/otzv42.png" alt="Фото 4" />
           <img class="review-item" src="img/otzv52.png" alt="Фото 5" />
         </div>
-      </div>
+      </section>
 
-      <div class="video-container">
+      <section class="video-container">
         <h2>Обзор</h2>
         <iframe
           width="560"
@@ -521,30 +95,28 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
-      </div>
-      <div class="delivery">
-        <h2>Доставка</h2>
-        <p>
-          Доставляем по всему Казахстану через KASPI и по странам СНГ через WB
-          или Ozon.
-        </p>
-      </div>
+      </section>
+      <section class="delivery">
+        <h2>
+          Доставляем по всему Казахстану через KASPI <br />И по странам СНГ
+          через WB или Ozon.
+        </h2>
+        <p></p>
+      </section>
 
-      <div class="differences">
+      <section class="differences">
         <h2>Отличия оригинала от аналогов</h2>
         <ul>
           <li>Самый большой размер.</li>
           <li>Самые качественные материалы.</li>
           <li>Самое удобное приложение, поддерживает русский язык.</li>
-          <li>
-            Лучше всего клеится к стене: размещение липучек на всю поверхность
-            бокс машины.
-          </li>
+          <li>Лучше всего клеится к стене.</li>
+          <li>Размещение липучек на всю поверхность бокс машины.</li>
           <li>Мишени появляются под бит песни, а не случайным образом.</li>
         </ul>
-      </div>
+      </section>
     </div>
-    <div class="video-container">
+    <section class="video-container">
       <h2>Инструкция по сборке</h2>
       <iframe
         width="560"
@@ -556,19 +128,18 @@
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
-    </div>
-    <div class="gallery">
+    </section>
+    <section id="gallery">
       <h2>Галерея</h2>
-      <div class="gallerry_photo">
+      <div class="gallery">
         <img src="img/gallery1.jpg" alt="Фото 1" />
         <img src="img/gallery4.jpg" alt="Фото 4" />
 
         <img src="img/gallery5.jpg" alt="Фото 4" />
-        <img src="img/3c9a8c4e-732f-4d4c-a842-3fd5d7af5815.jpeg" alt="Фото 4" />
         <img src="img/9f437142-8eff-4b8d-b716-bf5d653a903c.jpeg" alt="Фото 4" />
         <img src="img/e8169b77-150e-475f-8f04-e2a62830a5d2.jpeg" alt="Фото 4" />
       </div>
-    </div>
+    </section>
 
     <footer>
       <p>© 2025 LifeTrend</p>
