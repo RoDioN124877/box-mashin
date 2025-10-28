@@ -1,161 +1,462 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ONEPUNCH Box Machine</title>
+    <title>ONEPUNCH Box Machine — LifeTrend</title>
+    <meta name="theme-color" content="#071129" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhC7EKYQ9K_yIH521hTUH3WNKzVaxC1ljLHg&s"
-        alt="LifeTrend Logo"
-      />ONEPUNCH Box Machine
-      <div class="empty"></div>
-    </header>
-
-    <div class="container">
-      <div class="product">
-        <img src="img/photo1.png" alt="ONEPUNCH Box Machine" />
-        <div class="product-info">
-          <h2>Музыкальная бокс машина ONEPUNCH</h2>
-          <ul>
-            <li>6 сенсорных датчиков для точного контроля.</li>
-            <li>5000+ популярных песен для тренировок.</li>
-            <li>255 вариантов подсветки.</li>
-            <li>Совместимость с iOS и Android.</li>
-            <li>Компактная и лёгкая установка.</li>
-            <li>Удобное приложения на русском языке.</li>
-          </ul>
-          <div class="cta">
-            <div class="cta-links">
-              <a target="_blank" href="https://ozon.ru/t/KkJbYg7"
-                >Купить на Ozon</a
-              >
-              <a
-                target="_blank"
-                href="https://kaspi.kz/shop/p/muzykal-naja-boks-mashina-onepunch-chernyi-115277720/?c=710000000&m=30094220&sr=28&ref=shared_link"
-                >Купить на Kaspi</a
-              >
-              <a
-                target="_blank"
-                href="https://global.wildberries.ru/product?card=202859529"
-                >Купить на WB</a
-              >
-            </div>
-            <!-- <a href="https://wa.me/+77778706177" class="wtsp"
-              >свяжитесь с нами по WhatsApp
-            </a> -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhC7EKYQ9K_yIH521hTUH3WNKzVaxC1ljLHg&s"
+            alt="LifeTrend"
+          />
+          <div>
+            <div class="brand-name">LifeTrend</div>
+            <div class="brand-sm">ONEPUNCH Box Machine</div>
           </div>
         </div>
+
+        <nav class="top-nav">
+          <a href="#gallery">Галерея</a>
+          <a href="#features">Характеристики</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="html/buy.html" class="btn-outline">Купить</a>
+        </nav>
       </div>
+    </header>
 
-      <a
-        href="https://wa.me/your-phone-number"
-        class="whatsapp-btn"
-        target="_blank"
-        title="Оставить заявку через WhatsApp"
-      >
-        <img
-          src="https://images.sftcdn.net/images/t_app-icon-m/p/6b5a0468-96d1-11e6-bfc6-00163ec9f5fa/2095394417/whatsapp-logo"
-          alt=""
-        />
-      </a>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <h1>
+              Музыкальная бокс машина <span class="accent">ONEPUNCH</span>
+            </h1>
+            <p class="lead">
+              Интерактивная тренировка, 5000+ треков, 255 эффектов подсветки и
+              приложение на русском языке. Идеально для залов, школ и домашнего
+              использования.
+            </p>
 
-      <section class="video-container">
-        <h2>Видеообзор</h2>
-        <iframe
-          src="https://www.youtube.com/embed/TE4mz6eRPuU"
-          title="ONEPUNCH Box Machine Video Review"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-      </section>
-      <section class="galleryOzv">
-        <h2>Отзывы</h2>
-        <div class="gallerry_photoOzv">
-          <img class="review-item" src="img/otzv12.png" alt="Фото 1" />
-          <img class="review-item" src="img/otzv22.png" alt="Фото 2" />
-          <img class="review-item" src="img/otzv32.png" alt="Фото 3" />
-          <img class="review-item" src="img/otzv42.png" alt="Фото 4" />
-          <img class="review-item" src="img/otzv52.png" alt="Фото 5" />
+            <ul class="quick-features">
+              <li>6 сенсорных датчиков</li>
+              <li>Автоматическое размещение целей по биту</li>
+              <li>Работает с iOS/Android</li>
+            </ul>
+
+            <div class="hero-cta">
+              <a
+                id="buy"
+                class="btn-primary"
+                target="_blank"
+                href="html/buy.html"
+                >Купить сейчас</a
+              >
+              <a
+                class="btn-ghost"
+                target="_blank"
+                href="https://wa.me/+77778706177"
+                >Заказать через WhatsApp</a
+              >
+            </div>
+
+            <div class="badges">
+              <span>Гарантия 12 мес</span>
+              <span>Доставка по Казахстану</span>
+              <span>Оплата при получении</span>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="product-card">
+              <img src="img/photo1.png" alt="ONEPUNCH Box Machine" />
+              <div class="shop-links">
+                <a target="_blank" href="https://ozon.ru/t/KkJbYg7">Ozon</a>
+                <a
+                  target="_blank"
+                  href="https://kaspi.kz/shop/p/muzykal-naja-boks-mashina-onepunch-chernyi-115277720/?c=710000000&m=30094220&sr=28&ref=shared_link"
+                  >Kaspi</a
+                >
+                <a
+                  target="_blank"
+                  href="https://global.wildberries.ru/product?card=202859529"
+                  >WB</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="video-container">
-        <h2>Обзор</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/uG-SE8Nd8fk?si=LMAgm3iS-StZVfSm"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+      <section id="features" class="section-features">
+        <div class="container">
+          <h2>Почему ONEPUNCH</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>Профессиональные сенсоры</h3>
+              <p>Точные датчики реагируют на касание и силу удара.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Миллионы комбинаций</h3>
+              <p>
+                5000+ треков и 255 вариантов подсветки делают каждую тренировку
+                уникальной.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Простая установка</h3>
+              <p>
+                Комплект и инструкция — всё для быстрой сборки и крепления на
+                стену.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Поддержка</h3>
+              <p>Помогаем с настройкой приложения и обновлениями.</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="delivery">
-        <h2>
-          Доставляем по всему Казахстану через KASPI <br />И по странам СНГ
-          через WB или Ozon.
-        </h2>
-        <p></p>
+      <!-- Добавить после секции features и перед reviews -->
+
+      <section id="delivery" class="section-delivery">
+        <div class="container">
+          <h2>Доставка</h2>
+          <div class="delivery-grid">
+            <div class="delivery-card">
+              <h3>По Казахстану</h3>
+              <p>
+                Доставляем через KASPI во все города и регионы. Оплата при
+                получении.
+              </p>
+            </div>
+            <div class="delivery-card">
+              <h3>По странам СНГ</h3>
+              <p>Доставка через WildBerries или OZON с оплатой на сайте.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="differences">
-        <h2>Отличия оригинала от аналогов</h2>
-        <ul>
-          <li>Самый большой размер.</li>
-          <li>Самые качественные материалы.</li>
-          <li>Самое удобное приложение, поддерживает русский язык.</li>
-          <li>Лучше всего клеится к стене.</li>
-          <li>Размещение липучек на всю поверхность бокс машины.</li>
-          <li>Мишени появляются под бит песни, а не случайным образом.</li>
-        </ul>
+      <section id="differences" class="section-differences">
+        <div class="container">
+          <h2>Отличия оригинала от аналогов</h2>
+          <div class="differences-grid">
+            <div class="difference-item">
+              <div class="icon">📏</div>
+              <h3>Самый большой размер</h3>
+              <p>Оптимальная площадь для тренировок</p>
+            </div>
+            <div class="difference-item">
+              <div class="icon">🛡️</div>
+              <h3>Качественные материалы</h3>
+              <p>Прочный корпус и надежные сенсоры</p>
+            </div>
+            <div class="difference-item">
+              <div class="icon">📱</div>
+              <h3>Удобное приложение</h3>
+              <p>Полностью на русском языке</p>
+            </div>
+            <div class="difference-item">
+              <div class="icon">🎯</div>
+              <h3>Надежное крепление</h3>
+              <p>Липучки по всей поверхности</p>
+            </div>
+            <div class="difference-item">
+              <div class="icon">🎵</div>
+              <h3>Умные мишени</h3>
+              <p>Появляются точно под бит музыки</p>
+            </div>
+          </div>
+        </div>
       </section>
-    </div>
-    <section class="video-container">
-      <h2>Инструкция по сборке</h2>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/X7ZNgBY9B4A?si=4qF4hRoskF49ksRV"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </section>
-    <section id="gallery">
-      <h2>Галерея</h2>
-      <div class="gallery">
-        <img src="img/gallery1.jpg" alt="Фото 1" />
-        <img src="img/gallery4.jpg" alt="Фото 4" />
 
-        <img src="img/gallery5.jpg" alt="Фото 4" />
-        <img src="img/9f437142-8eff-4b8d-b716-bf5d653a903c.jpeg" alt="Фото 4" />
-        <img src="img/e8169b77-150e-475f-8f04-e2a62830a5d2.jpeg" alt="Фото 4" />
-      </div>
-    </section>
+      <section id="manual" class="section-manual">
+        <div class="container">
+          <h2>Инструкция по сборке</h2>
+          <div class="manual-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <h3>Распаковка</h3>
+              <p>Достаньте все компоненты и проверьте комплектацию</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <h3>Сборка каркаса</h3>
+              <p>Соедините основные элементы конструкции</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <h3>Монтаж</h3>
+              <p>Закрепите тренажер на стене по разметке</p>
+            </div>
+            <div class="step">
+              <span class="step-number">4</span>
+              <h3>Настройка</h3>
+              <p>Установите приложение и подключите устройство</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="videos" class="section-videos">
+        <div class="container">
+          <h2>Видео</h2>
+          <div class="videos-grid">
+            <div class="video-card">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/X7ZNgBY9B4A?si=4qF4hRoskF49ksRV"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/uG-SE8Nd8fk?si=LMAgm3iS-StZVfSm"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="reviews" class="section-reviews">
+        <div class="container">
+          <h2>Отзывы покупателей</h2>
+          <div class="reviews-grid">
+            <div class="review-item">
+              <img src="img/otzv12.png" alt="отзыв 1" />
+              <p class="review-text">
+                "Отличный тренажёр — дети в восторге. Доставили быстро."
+              </p>
+              <div class="meta">Аружан • Алматы</div>
+            </div>
+            <div class="review-item">
+              <img src="img/otzv22.png" alt="отзыв 2" />
+              <p class="review-text">
+                "Качество материалов и подсветка — супер."
+              </p>
+              <div class="meta">Жан • Нур-Султан</div>
+            </div>
+            <div class="review-item">
+              <img src="img/otzv32.png" alt="отзыв 3" />
+              <p class="review-text">"Идеально для клуба — рекомендую."</p>
+              <div class="meta">TeamFit • Шымкент</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-      <p>© 2025 LifeTrend</p>
-      <div class="social-links">
-        <a href="https://www.tiktok.com/@lifetrend.kz?_t=8scbeIHLPfC&_r=1"
-          >TikTok</a
-        >
-        <a
-          href="https://www.instagram.com/lifetrend.kz/profilecard/?igsh=MTB2NzJpNDV2Mjh6Yw=="
-          >Instagram</a
-        >
-        <a href="https://www.youtube.com/channel/UCNB89VzOZD3QhH40Wifz8pg"
-          >YouTube</a
-        >
-        <a href="https://wa.me/+77778706177"> +77778706177 </a>
+      <section id="gallery" class="section-gallery">
+        <div class="container">
+          <h2>Галерея</h2>
+          <div class="gallery-wrapper">
+            <button class="gallery-nav prev">‹</button>
+            <button class="gallery-nav next">›</button>
+            <div class="gallery-container">
+              <div class="gallery-slide">
+                <img src="img/gallery1.jpg" alt="gallery 1" />
+              </div>
+              <div class="gallery-slide">
+                <img src="img/gallery4.jpg" alt="gallery 2" />
+              </div>
+              <div class="gallery-slide">
+                <img src="img/gallery5.jpg" alt="gallery 3" />
+              </div>
+              <div class="gallery-slide">
+                <img
+                  src="img/9f437142-8eff-4b8d-b716-bf5d653a903c.jpeg"
+                  alt="gallery 4"
+                />
+              </div>
+              <div class="gallery-slide">
+                <img
+                  src="img/e8169b77-150e-475f-8f04-e2a62830a5d2.jpeg"
+                  alt="gallery 5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta">
+        <div class="container cta-inner">
+          <div>
+            <h2>Готовы начать тренировки?</h2>
+            <p>Оставьте заявку — наши менеджеры свяжутся и оформят доставку.</p>
+          </div>
+          <div class="buynow">
+            <a
+              class="btn-primary large"
+              target="_blank"
+              href="https://wa.me/+77778706177"
+              >Оформить заказ в WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2025 LifeTrend</div>
+        <div class="social">
+          <a href="https://www.tiktok.com/@lifetrend.kz" target="_blank"
+            >TikTok</a
+          >
+          <a href="https://www.instagram.com/lifetrend.kz" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://www.youtube.com" target="_blank">YouTube</a>
+          <a href="https://wa.me/+77778706177" target="_blank"
+            >+7 777 870 6177</a
+          >
+        </div>
       </div>
     </footer>
+
+    <a
+      href="https://wa.me/+77778706177"
+      class="floating-whatsapp"
+      target="_blank"
+      aria-label="WhatsApp"
+    >
+      <img
+        src="https://images.sftcdn.net/images/t_app-icon-m/p/6b5a0468-96d1-11e6-bfc6-00163ec9f5fa/2095394417/whatsapp-logo"
+        alt="WA"
+      />
+    </a>
+
+    <script>
+      const gallery = {
+        container: document.querySelector(".gallery-container"),
+        slides: Array.from(document.querySelectorAll(".gallery-slide")),
+        prevBtn: document.querySelector(".gallery-nav.prev"),
+        nextBtn: document.querySelector(".gallery-nav.next"),
+        current: 0,
+        gap: 30,
+
+        init() {
+          this.updateDimensions();
+          this.updatePosition();
+
+          this.slides[0].classList.add("active");
+          this.prevBtn.style.opacity = "0.4";
+
+          this.prevBtn.addEventListener("click", () => this.move("prev"));
+          this.nextBtn.addEventListener("click", () => this.move("next"));
+
+          // Fullscreen
+          this.slides.forEach((slide) => {
+            slide.addEventListener("click", (e) =>
+              this.showFullscreen(e.currentTarget.querySelector("img").src)
+            );
+          });
+
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+              const overlay = document.querySelector(".fullscreen-overlay");
+              if (overlay) this.closeFullscreen(overlay);
+            }
+          });
+
+          // Touch swipe
+          let startX;
+          this.container.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+          });
+          this.container.addEventListener("touchend", (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            if (Math.abs(diff) > 50) {
+              if (diff > 0 && this.current < this.slides.length - 1)
+                this.move("next");
+              if (diff < 0 && this.current > 0) this.move("prev");
+            }
+          });
+
+          window.addEventListener("resize", () => {
+            this.updateDimensions();
+            this.updatePosition();
+          });
+        },
+
+        updateDimensions() {
+          this.slideWidth = this.slides[0].offsetWidth;
+          this.containerWidth = this.container.offsetWidth;
+          this.centerOffset = (this.containerWidth - this.slideWidth) / 2;
+          this.maxTranslate =
+            (this.slides.length - 1) * (this.slideWidth + this.gap) -
+            this.centerOffset;
+        },
+
+        updatePosition() {
+          let translateX =
+            this.current * (this.slideWidth + this.gap) - this.centerOffset;
+
+          // 🔒 Ограничиваем крайние позиции
+          if (translateX < 0) translateX = 0;
+          if (translateX > this.maxTranslate) translateX = this.maxTranslate;
+
+          this.container.style.transform = `translateX(-${translateX}px)`;
+
+          this.slides.forEach((slide, index) => {
+            const isActive = index === this.current;
+            slide.classList.toggle("active", isActive);
+            slide.style.transform = `scale(${isActive ? 1 : 0.85})`;
+            slide.style.opacity = isActive ? 1 : 0.5;
+          });
+
+          this.prevBtn.style.opacity = this.current === 0 ? "0.4" : "1";
+          this.nextBtn.style.opacity =
+            this.current === this.slides.length - 1 ? "0.4" : "1";
+        },
+
+        move(direction) {
+          const old = this.current;
+
+          if (direction === "next" && this.current < this.slides.length - 1)
+            this.current++;
+          if (direction === "prev" && this.current > 0) this.current--;
+
+          if (old !== this.current) this.updatePosition();
+        },
+
+        showFullscreen(src) {
+          const overlay = document.createElement("div");
+          overlay.className = "fullscreen-overlay";
+          overlay.innerHTML = `<img src="${src}" class="fullscreen-img" alt="fullscreen view">`;
+          document.body.appendChild(overlay);
+          requestAnimationFrame(() => overlay.classList.add("visible"));
+          overlay.addEventListener("click", () =>
+            this.closeFullscreen(overlay)
+          );
+        },
+
+        closeFullscreen(overlay) {
+          overlay.classList.remove("visible");
+          setTimeout(() => overlay.remove(), 300);
+        },
+      };
+
+      gallery.init();
+    </script>
   </body>
 </html>
